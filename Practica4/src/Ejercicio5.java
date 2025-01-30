@@ -25,7 +25,11 @@ public class Ejercicio5 {
                 break;
             }
             case('/'):{
-                System.out.println(numero1 + " / " + numero2 + " = " + (numero1/numero2));
+                if(numero2 != 0) {
+                    System.out.println(numero1 + " / " + numero2 + " = " + (numero1 / numero2));
+                }else{
+                    System.out.println("ERROR: No se puede dividir entre 0.");
+                }
                 break;
             }
             default:{
