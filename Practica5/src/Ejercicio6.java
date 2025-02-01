@@ -6,8 +6,8 @@ public class Ejercicio6 {
         int saldo = 0;
         String operacion = null;
         boolean continuar = true;
+        System.out.println("Ingrese una operacion:\nD: Depositar (D n)\nR: Retirar (R n)\nNo ingrese nada para salir del programa");
         while(continuar){
-            System.out.println("Ingrese una operacion:\nD: Depositar (D n)\nR: Retirar (R n)\nNo ingrese nada para salir del programa");
             operacion = scan.nextLine();
             if(operacion.isEmpty()){
                 break;
