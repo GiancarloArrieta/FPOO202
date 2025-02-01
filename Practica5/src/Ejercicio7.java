@@ -4,7 +4,7 @@ public class Ejercicio7 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int base;
-        System.out.println("Ingrese un número impar la base del árbol:");
+        System.out.println("Ingrese un número impar para la base del árbol:");
         base = scan.nextInt();
         if(base%2 != 0){
             int i = 0, altura = (base/2)+1;
