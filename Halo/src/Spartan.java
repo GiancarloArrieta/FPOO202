@@ -1,8 +1,15 @@
 public class Spartan {
 
     //Atributos
-    public String nombre, armaPrincipal;
-    int salud, escudo;
+    private String nombre, armaPrincipal;
+    private int salud, escudo;
+
+    public Spartan(String nombre, String armaPrincipal, int salud, int escudo) {
+        this.nombre = nombre;
+        this.armaPrincipal = armaPrincipal;
+        this.salud = salud;
+        this.escudo = escudo;
+    }
 
     //Métodos
     public void mostrarInfo(){
@@ -26,5 +33,37 @@ public class Spartan {
         }else{
             System.out.println(nombre + " se detuvo");
         }
+    }
+
+    private void consultarCortana(){
+        System.out.println("Conversacion privada...");
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getArmaPrincipal() {
+        return armaPrincipal;
+    }
+    public void setArmaPrincipal(String armaPrincipal) {
+        this.armaPrincipal = armaPrincipal;
+    }
+
+    public int getSalud() {
+        return salud;
+    }
+    public void setSalud(int salud) {
+        this.salud = salud;
+    }
+
+    public int getEscudo() {
+        return escudo;
+    }
+    public void setEscudo(int escudo) {
+        this.escudo = escudo;
     }
 }

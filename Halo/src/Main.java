@@ -2,13 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Creación de instancia
-        Spartan MasterChief = new Spartan();
-
-        //Uso de atributos
-        MasterChief.nombre = "John";
-        MasterChief.salud = 100;
-        MasterChief.escudo = 50;
-        MasterChief.armaPrincipal = "Rifle de asalto";
+        Spartan MasterChief = new Spartan("John", "Rifle de asalto", 100, 50);
 
         //Invocacion de métodos
         MasterChief.mostrarInfo();
@@ -16,17 +10,20 @@ public class Main {
         MasterChief.recargarArma(60);
         MasterChief.correr(true);
 
-        //Creacion de instancia 2
-        Spartan Spartan2 = new Spartan();
+        //Uso de get y set para cambiar el atributo Nombre
+        MasterChief.setNombre("Giancarlo");
+        MasterChief.mostrarInfo();
+        System.out.println(MasterChief.getNombre());
 
-        Spartan2.nombre = "Eli";
-        Spartan2.salud = 75;
-        Spartan2.escudo = 150;
-        Spartan2.armaPrincipal = "Rifle de rafaga";
+        //Creacion de instancia 2
+        Spartan Spartan2 = new Spartan("Eli", "Rifle de rafaga", 75, 150);
 
         Spartan2.mostrarInfo();
         Spartan2.atacar("Brute");
         Spartan2.recargarArma(30);
         Spartan2.correr(false);
+
+        //Intento de uso de método privado
+        //Spartan2.consultarCortana();
     }
 }
