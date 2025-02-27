@@ -6,11 +6,10 @@ public class Main {
         boolean menu = true;
         int opcion;
 
-        cuentasBancarias cuenta1 = new cuentasBancarias();
-        cuenta1.numCuenta = "1234567890";
-        cuenta1.titular = cuenta1.solicitarNombreTitular();
-        cuenta1.edadTitular = cuenta1.solicitarEdadTitular();
-        cuenta1.saldo = cuenta1.solicitarSaldoInicial();
+        cuentasBancarias cuenta1 = new cuentasBancarias("1234567890", "", 0, 0);
+        cuenta1.solicitarNombreTitular();
+        cuenta1.solicitarEdadTitular();
+        cuenta1.solicitarSaldoInicial();
 
         do{
             String decision = JOptionPane.showInputDialog(null, "Eliga una opcion a realizar con su cuenta:" +
