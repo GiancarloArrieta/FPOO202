@@ -48,6 +48,7 @@ public class Contrasena {
         }else{
             setPermitirMayusculas(false);
         }
+
     }
     public void solicitarCaracteresEspeciales(){
         String botones[] = {"Si", "No"};

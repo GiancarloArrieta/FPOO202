@@ -56,4 +56,19 @@ public class UsuarioCRUD {
             return null;
         }
     }
+    
+    public boolean actualizarUsuario(String id, String nombre, String correo, String contrasena){
+        String sqlUpdate = "update usuarios set nombre = ?, correo = ?, contrasena = ? where id = ?;";
+        try{
+            PreparedStatement ps = conexion.prepareStatement(sqlUpdate);
+            ps.setString(1, nombre);
+            ps.setString(2, correo);
+            ps.setString(3, contrasena);
+            ps.setString(4, id);
+            return ps.executeUpdate()>0;
+        }catch(SQLException exception){
+            System.out.println("Error al intentar insertar: " + exception.getMessage());
+            return false;
+        }
+    }
 }
