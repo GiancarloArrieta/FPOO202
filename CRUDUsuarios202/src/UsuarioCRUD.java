@@ -1,4 +1,4 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -68,6 +68,18 @@ public class UsuarioCRUD {
             return ps.executeUpdate()>0;
         }catch(SQLException exception){
             System.out.println("Error al intentar insertar: " + exception.getMessage());
+            return false;
+        }
+    }
+    
+    public boolean eliminarUsuario(String id){
+        String sqlDelete = "delete from usuarios where id = ?;";
+        try{
+            PreparedStatement ps = conexion.prepareStatement(sqlDelete);
+            ps.setString(1, id);
+            return ps.executeUpdate()>0;
+        }catch(SQLException exception){
+            System.out.println("Error al intentar eliminar: " + exception.getMessage());
             return false;
         }
     }

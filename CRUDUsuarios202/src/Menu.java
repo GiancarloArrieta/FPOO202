@@ -83,6 +83,11 @@ public class Menu extends javax.swing.JFrame {
         jMenu1.add(itmEditarUsuario);
 
         itmEliminarUsuario.setText("Eliminar usuario");
+        itmEliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmEliminarUsuarioActionPerformed(evt);
+            }
+        });
         jMenu1.add(itmEliminarUsuario);
 
         jMenuBar1.add(jMenu1);
@@ -117,6 +122,11 @@ public class Menu extends javax.swing.JFrame {
         FormActualizar FA = new FormActualizar();
         FA.setVisible(true);
     }//GEN-LAST:event_itmEditarUsuarioActionPerformed
+
+    private void itmEliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmEliminarUsuarioActionPerformed
+        FormEliminar FE = new FormEliminar();
+        FE.setVisible(true);
+    }//GEN-LAST:event_itmEliminarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
